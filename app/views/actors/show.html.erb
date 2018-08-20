@@ -1,0 +1,11 @@
+<h1> @actor.name </h1>
+
+<h3>Movie:</h3>
+<p>
+  <%= @movie.characters.each do |movie| %>
+  <li><%= movie.actor_id %></li>
+  <% end %>
+</p>
+
+<h3>Character:</h3>
+<p><%= @actor.character.name %></p>
