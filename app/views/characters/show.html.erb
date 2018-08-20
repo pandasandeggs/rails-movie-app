@@ -1,2 +1,7 @@
-<h1>Characters#show</h1>
-<p>Find me in app/views/characters/show.html.erb</p>
+<h1><%= @character.name %></h1>
+
+<h3> Movie: </h3>
+<p><%= link_to @character.movie.title, movie_path %></p><br>
+
+<h3> Actor: </h3>
+<p><%= link_to @character.actor.name, actor_path %></p>

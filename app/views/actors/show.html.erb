@@ -1,11 +1,15 @@
-<h1> @actor.name </h1>
+<h1><%= @actor.name %></h1>
 
 <h3>Movie:</h3>
 <p>
-  <%= @movie.characters.each do |movie| %>
-  <li><%= movie.actor_id %></li>
+  <% @actor.characters.each do |character| %>
+  <%= link_to character.movie.title, character.movie %>
   <% end %>
 </p>
 
 <h3>Character:</h3>
-<p><%= @actor.character.name %></p>
+<p>
+  <% @actor.characters.each do |character| %>
+  <%= link_to character.name, character %>
+  <% end %>
+</p>
